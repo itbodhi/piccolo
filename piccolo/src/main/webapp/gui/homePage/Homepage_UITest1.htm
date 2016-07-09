@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE-edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <title>Search Bar</title>
+   
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/piccolo.css" rel="stylesheet">
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+  .navbar{
+   height:50px;
+  }
+   p{
+    color: black;
+      }
+   h3{
+	color: green;
+	} 
+  </style>
+
+</head>
+
+<body>
+     <nav class="navbar navbar-default navbar-fixed-top" role="navigation" >
+  		<div class="container">
+   			<div class="navbar-header">
+                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                 </button>
+      			<a class="navbar-brand" href="#">PICcOLO</a>
+    		</div>
+			<div id="navbar" class="navbar-collapse collapse">
+    			 <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					 <li><a href="#">About</a></li>
+					 <li><a href="#">Features</a></li>
+					 <li><a href="#">Happy Parents</a></li>
+    			 </ul>
+    			 <ul class="nav navbar-nav navbar-right">
+					 <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					 <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    			 </ul>
+			</div>
+		</div>	
+ 	 </nav>
+	 <br>
+		<!-- SlideShow -->
+		
+			<div class="container-fluid">
+			  <br>
+			  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+				  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				  <li data-target="#myCarousel" data-slide-to="1"></li>
+				  <li data-target="#myCarousel" data-slide-to="2"></li>
+				  <li data-target="#myCarousel" data-slide-to="3"></li>
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+
+				  <div class="item active">
+					<img src="img/1.jpg" alt="Piccolo" width="240" height="130">
+					<div class="carousel-caption">
+					  <h3>Welcome to Piccolo</h3>
+					  <p>A Native place where you can make your child's childhood even more Happier !!</p>
+					</div>
+				  </div>
+
+				  <div class="item">
+					<img src="img/2.jpg" alt="Genious" width="460" height="345">
+					<div class="carousel-caption">
+					  <h3>Kids use their minds Geniously</h3>
+					  <p>Are you Smart than a 5 year old?.</p>
+					</div>
+				  </div>
+				
+				  <div class="item">
+					<img src="img/3.jpg" alt="child" width="460" height="345">
+					<div class="carousel-caption">
+					  <h3>Enjoy @Childhood</h3>
+					  <p>Childhood is for Enjoy.</p>
+					</div>
+				  </div>
+
+				  <div class="item">
+					<img src="img/4.jpg" alt="child" width="460" height="345">
+					<div class="carousel-caption">
+					  <h3>Childhood</h3>
+					  <p>60% of our mind develop in Childhood.</p>
+					</div>
+				  </div>
+			  
+				</div>
+
+				<!-- Left and right controls -->
+				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+				  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				  <span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+				  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				  <span class="sr-only">Next</span>
+				</a>
+			  </div> 
+			</div>
+<!--
+   <header class="jumbotron">
+      <div class="container">
+        <div class="row row-header">
+            <div class="col-xs-12 col-sm-8">
+				 
+			<p style="padding:40px;"></p>
+                <h1>Welcome to PICcOLO</h1>
+                 <br> 
+                <p>A Native place where you can make your child's childhood even more Happier !!<p>
+             </div>
+             <div class="col-xs-12 col-sm-4">
+             </div>
+        </div>
+	  </div>
+   </header>
+-->
+ <!--Body Content -->
+ <br>
+<div>
+<div class="container">
+  <div class="row row-content"> 
+    <p style="padding:20px;"></p>  
+    <form class="form-inline" align="middle"> 
+       <div class="form-group">
+        <!-- Here Space Bar for Search keyword will be -->
+          <input type="text" class="form-control input-lg" id="SearchKeyword" name="Keyword" placeholder=" Enter Event Type (Ex: Sports, Tutions, etc)" autocomplete="on" align="middle" size="45">  
+       </div> 
+       
+       <div class="form-group">
+        <!-- Here Space Bar for Search keyword will be -->
+          <input type="text" class="form-control input-lg" id="Searchlocation" name="location" placeholder=" Near your Place (Ex: Vasant Vihar, Delhi)" autocomplet="on" align="middle" size="35">
+       </div> 
+  
+       <!-- Here Search Button for Search will be -->
+         <a href="#"><button type="button" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-search"></span> Search
+                     </button>
+         </a>
+     </form>   
+   </div>
+   <br>
+   <br>
+   <h2 align="center">
+    <p style="padding:20px;"></p>
+    <div class="page-header">Upcoming Events!!</div>
+   </h2>
+   
+  <div class="row">
+    <div class="col-md-4">
+	 <p style="padding:20px;"></p>
+     <a href="img/4.jpg" class="thumbnail">
+      <img src="img/4.jpg" alt="Dreams" style="width:300px;height:220px">
+     </a>
+    </div>
+    <div class="col-md-4">
+	 <p style="padding:20px;"></p>
+     <a href="img/2.jpg" class="thumbnail">
+      <img src="img/2.jpg" alt="Love Kids" style="width:300px;height:220px">
+     </a>
+    </div>
+    <div class="col-md-4">
+	<p style="padding:20px;"></p>
+     <a href="img/5.jpg" class="thumbnail">
+      <img src="img/5.jpg" alt="Childhood" style="width:300px;height:220px">
+     </a>
+    </div>
+  </div>
+ </div> 
+	<br>
+	<br>
+	<br>
+</div>	
+    <footer  class="row-footer">
+        <div class="container">
+            <div>             
+                <div class="col-xs-5 col-xs-offset-1 col-sm-2 col-sm-offset-1">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+               <div class="col-xs-6 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+		              *Here Address of PICcOLO*<br>
+					  *is to write*<br>
+		              Tel.: <br>
+		              WhatsApp No.: <br>
+		              Email: <a href="#">info@piccolo.com</a>
+		           </address>
+                </div>
+               <div class="col-xs-12 col-sm-4">
+                    <div style="padding: 40px 10px;">
+                        <a href="http://google.com/+">Google+</a>
+                        <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
+                        <a href="http://www.linkedin.com/in/">LinkedIn</a>
+                        <a href="http://twitter.com/">Twitter</a>
+                        <a href="http://youtube.com/">YouTube</a>
+                        <a href="mailto:">Mail</a>
+                    </div>
+                </div>
+                 <div class="col-xs-12">
+                    <p style="padding:10px;"></p>
+                    <p align=center>© Copyright 2016 PICcOLO Pvt. Ltd. Delhi</p>
+                </div>
+            </div>
+        </div>
+    </footer> 
+	
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>  
+ 
+ </html>
