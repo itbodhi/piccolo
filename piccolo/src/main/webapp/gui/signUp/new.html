@@ -10,7 +10,7 @@
     <!-- Bootstrap -->
     <link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
-  <body style="background:#4F597E">
+  <body style="background:#4F597E;overflow:hidden">
    <div>
    <nav class="navbar navbar-default" style="background:#24305E;border: none">
      <div class="container-fluid">
@@ -23,7 +23,11 @@
      <div class="col-md-8 col-md-offset-2">
        <h2><p class="text-center" style="color:white;"><i>(We recommend the best for KIDS)</i></p></h2>
      </div>
-   </div><br><br>
+
+     <div class="col-md-4 col-md-offset-4">
+       <h2><p class="text-center" style="font-family:cursive;color: black;">Create Your Piccolo Account</p></h2>
+     </div>
+   </div>
 
    <div class="container">
     <div class="row">
@@ -32,10 +36,8 @@
           
           <div class="col-md-12 input-group">
             <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-            <input type="text" class="form-control" placeholder="First name" aria-describedby="basic-addon1">
+            <input type="text" class="form-control" placeholder="Your name" aria-describedby="basic-addon1">
 
-            <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-            <input type="text" class="form-control" placeholder="Last name" aria-describedby="basic-addon1">
           </div>
          </div>
        <div class="row form-group">
@@ -65,15 +67,15 @@
           <input type="text" class="form-control" placeholder="Confirm Password" aria-describedby="basic-addon1">
         </div>
        </div>
-       <div class="row form-group">
-        <div class="col-md-4">
-          <p style="color:white!important;margin-top:15px;font-size:20px;">Signup as:</p>
+       <div class="row form-group" style="border:dotted 1.75px black;">
+        <div class="col-md-3">
+          <p style="color:white!important;margin-top:14.5px;font-size:20px;">Signup as:</p>
         </div>
          <div class="col-md-4">
           <div class="radio input-lg">
             <label style="color:white!important;">
               <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-              Guardian
+              Guardian<h4 style="margin-top:-5px!important;font-family:cursive;"><small style="color:black!important;">(Get services)</small></h4>
             </label>
           </div>
        </div>
@@ -81,13 +83,14 @@
           <div class="radio input-lg">
             <label style="color:white!important;">
               <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-              Vendor
+              Vendor<h4 style="margin-top:-5px!important;font-family:cursive;"><small style="color:black!important;">(Post an event)</small></h4>
             </label>
           </div>
        </div>
+       </div>
 
        <div class="row form-group">
-         <div class="col-md-offset-5 col-md-6">
+         <div class="col-md-offset-5 col-md-6"><br>
          <button type="button" class="btn btn-success">Submit</button>
          </div>
        </div>
