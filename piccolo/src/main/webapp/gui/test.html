@@ -6,10 +6,10 @@
 $(document).ready(function(){
     $("button").click(function(){
         $.ajax
-        ({ url: "/piccolo/mylist", async: false,type:"POST", success: function(result)
+        ({ url: "/piccolo/list", async: false,type:"POST", success: function(result)
            {
-        	alert(result);
-            $("div").html(result);
+        	
+            $("div").html(result.query);
            } 
          }
         );
