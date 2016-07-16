@@ -4,6 +4,7 @@ public class Request {
 
 	String location;
 	String evenType;
+	
 	public String getLocation() {
 		return location;
 	}

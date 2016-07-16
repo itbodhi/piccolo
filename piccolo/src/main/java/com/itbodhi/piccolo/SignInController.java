@@ -17,11 +17,14 @@ public class SignInController {
 
 		UserBean ub = new UserBean();
 		
+		
 		Workflow signIn = new SignInWorkflow();
 		
 		WorkFlowContext ctx = new WorkFlowContext();
 		
 		ctx.setUserBean(ub);
+		
+		//ctx.setIpContxt(sb);
 		
 		signIn.setContext(ctx);
 		
@@ -35,7 +38,7 @@ public class SignInController {
 			}
 		ctx = (WorkFlowContext)signIn.getContext();
 	
-		//ctx.get
+		//List list = ctx.getOpContxt();
 		
 		UserQueryBean uqb = new UserQueryBean();
 		

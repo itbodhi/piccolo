@@ -71,6 +71,11 @@
 			<version>3.1.0</version>
 			
 		</dependency>
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
   </dependencies>
   <build>
     <finalName>piccolo</finalName>
@@ -81,7 +86,7 @@
 			<version>2.6</version>
 						  
 			<configuration>
-              <outputDirectory>/Users/rajnishechauhan/Tutorial/apache-tomcat-9.0.0.M8/webapps/</outputDirectory>
+              <outputDirectory>/Users/rajnishechauhan/Tutorial/apache-tomcat-8.0.36/webapps/</outputDirectory>
             </configuration> 
             
 		</plugin>

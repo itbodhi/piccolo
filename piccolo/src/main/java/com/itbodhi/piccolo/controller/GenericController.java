@@ -9,12 +9,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.itbodhi.piccolo.ui.bean.UserQueryBean;
 
 
 
-@RestController(value = "/")
+@RestController(value = "/async")
 public class GenericController {
 
     @RequestMapping(value = "/list" ,method = RequestMethod.POST)
@@ -61,8 +62,16 @@ public class GenericController {
     
     @RequestMapping(value = "/search" ,method = RequestMethod.POST)
     public Response getList(@RequestBody Request request){
-        
-    	
+    	System.out.println("in getList");
+    	System.out.println(request.getEvenType());
         return new Response("Request has recived :"+request.getEvenType());
     }    
+
+    @RequestMapping(value = "/searchResult" ,method = RequestMethod.POST)
+    public ModelAndView getSearchResult(@RequestBody Request request){
+        
+    	System.out.println(request.evenType);
+        return new ModelAndView("redirect:gui/result.html");
+    }    
+
 }

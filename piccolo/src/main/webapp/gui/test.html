@@ -11,7 +11,7 @@ $(document).ready(function(){
            alert(data.query);
         }});
 	
-    $("button").click(function(){
+    /*$("button").click(function(){
         $.ajax
         ({ url: "/piccolo/list", async: false,type:"POST", success: function(result)
            {
@@ -21,27 +21,48 @@ $(document).ready(function(){
          }
         );
     });
-    
+    */
 	  $('#searchNow').click(function(){
  		var uLoc = $('#userLoc').val(); 
 		var uEvent = $('#eName').val(); 
 		
-        alert(uLoc+uEvent);		  
-		
-        $.ajax({
-        	  type: "POST",
-        	  url: "/piccolo/search",
-        	  data: JSON.stringify({ location: uLoc, evenType: uEvent }),
-        	  
-        	  success: function(data) {
-        	    
-        		  alert('you search for:'+data.list);
-        	    
-        	  }
-        	});
+       	  
+		// data: JSON.stringify({ location: uLoc, evenType: uEvent })
+	       $.post
+	        ({ url: "/piccolo/search", async: false,type:"POST", 
+	        	contentType:"application/json",
+	        	data: JSON.stringify({ location: uLoc, evenType: uEvent }),
+	        	success: function(result)
+	           {
+	        	
+	            alert("search done");
+	           } 
+	         }
+	        );
+       
 	  
 	  });
 	  
+	  $('#redirect').click(function(){
+	 		var uLoc = $('#userLoc').val(); 
+			var uEvent = $('#eName').val(); 
+			
+	        $.post({
+	        	  type: "POST",contentType:"application/json",
+	        	  url: "/piccolo/searchResult",async: false,
+	        	  data: JSON.stringify({ location: uLoc, evenType: uEvent }),
+	        	  
+	        	  success: function(data) {
+	        	    
+	        		  $('#stage').load('/piccolo/searchResult');
+	        	    
+	        	  },
+	        	  error : function(){
+	        		  alert('some error occured');
+	        	  }
+	        	});
+		  
+		  });
 });
 </script>
 </head>
@@ -54,6 +75,12 @@ $(document).ready(function(){
 <input type="text"  name="eName" id="eName" placeholder="Select Event!">
 
 <button type="submit" name="searchNow" id="searchNow" >Find my events</button>
+
+<button type="submit" name="redirect" id="redirect" >Redirect to other page</button>
+
+      <div id = "stage" style = "background-color:cc0;">
+         STAGE
+      </div>
 </body>
 </html>
 
