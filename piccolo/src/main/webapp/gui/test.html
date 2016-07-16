@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	
+	$.ajax({ url: "/piccolo/list",async: false,type:"POST",
+        context: document.body,
+        success: function(data){
+           alert(data.query);
+        }});
+	
+    $("button").click(function(){
+        $.ajax
+        ({ url: "/piccolo/list", async: false,type:"POST", success: function(result)
+           {
+        	
+            $("div").html(result.query);
+           } 
+         }
+        );
+    });
+    
+	  $('#searchNow').click(function(){
+ 		var uLoc = $('#userLoc').val(); 
+		var uEvent = $('#eName').val(); 
+		
+        alert(uLoc+uEvent);		  
+		
+        $.ajax({
+        	  type: "POST",
+        	  url: "/piccolo/search",
+        	  data: JSON.stringify({ location: uLoc, evenType: uEvent }),
+        	  
+        	  success: function(data) {
+        	    
+        		  alert('you search for:'+data.list);
+        	    
+        	  }
+        	});
+	  
+	  });
+	  
+});
+</script>
+</head>
+<body>
+
+<div><h2>Let AJAX change this text</h2></div>
+
+<button>Change Content</button>
+<input type="text"  name="userLoc" id="userLoc" placeholder="Your Location!">
+<input type="text"  name="eName" id="eName" placeholder="Select Event!">
+
+<button type="submit" name="searchNow" id="searchNow" >Find my events</button>
+</body>
+</html>
+
