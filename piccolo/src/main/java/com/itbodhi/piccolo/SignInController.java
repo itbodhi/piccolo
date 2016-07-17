@@ -23,6 +23,7 @@ public class SignInController {
 		
 		ctx.setUserBean(ub);
 		
+		signIn.setContext(ctx);
 		
 			try {
 				signIn.execute();
@@ -32,8 +33,10 @@ public class SignInController {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		
+		ctx = (WorkFlowContext)signIn.getContext();
 	
+		//ctx.get
+		
 		UserQueryBean uqb = new UserQueryBean();
 		
 		ctx.setIpContxt(uqb);
