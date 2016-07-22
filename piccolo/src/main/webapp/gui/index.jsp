@@ -10,8 +10,10 @@
 				<li>${listValue.query}</li>
 				<li>${listValue.name}</li>
 				<li>${idx.index}</li>
+
 				
 			<img src="${listValue.name}"/>
+
 		</ul>
      </c:forEach>
 	</c:if>
