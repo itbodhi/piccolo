@@ -32,7 +32,7 @@ public class SignInWorkflow extends BaseWorkflow implements Workflow{
 	
 	public void passWordValidation(String loginId) throws Exception
 	{
-		// passowrd validation code
+		// password validation code
 		
 		UserDAO ud = new UserDAO();
 		
