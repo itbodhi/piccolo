@@ -1,45 +1,40 @@
 package com.itbodhi.piccolo;
 
-import org.hibernate.SessionFactory;
-
-import com.itbodhi.piccolo.db.HibernateUtil;
+import com.itbodhi.piccolo.controller.Response;
 import com.itbodhi.piccolo.ui.bean.UserBean;
-import com.itbodhi.piccolo.ui.bean.UserQueryBean;
 import com.itbodhi.piccolo.workflow.WorkFlowContext;
 import com.itbodhi.piccolo.workflow.Workflow;
 import com.itbodhi.piccolo.workflow.impl.signin.SignInWorkflow;
 import com.itbodhi.piccolo.workflow.impl.signin.UserNotExist;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController(value = "/")
 public class SignInController {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		UserBean ub = new UserBean();
-		
-		Workflow signIn = new SignInWorkflow();
-		
-		WorkFlowContext ctx = new WorkFlowContext();
-		
-		ctx.setUserBean(ub);
-		
+	
+	@RequestMapping(value = "/signin" ,method = RequestMethod.POST)
+    public Response getLogin(@RequestBody UserBean uq ){
+        
+		//UserBean ub=
+		String message=new String();
+		Workflow signIn = new SignInWorkflow();		
+		WorkFlowContext ctx = new WorkFlowContext();	
+		ctx.setUserBean(uq);
 		signIn.setContext(ctx);
 		
 			try {
 				signIn.execute();
+				message="You have successfully logged In";
 			}catch(UserNotExist e){
-				// define view to redirect
+				message="User not exists, Please signup";
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
+				message="something went wrong";
 			}
-		ctx = (WorkFlowContext)signIn.getContext();
-	
-		//ctx.get
+		   //ctx = (WorkFlowContext)signIn.getContext();	
+		return new Response(message);
 		
-		UserQueryBean uqb = new UserQueryBean();
-		
-		ctx.setIpContxt(uqb);
-	}
-
+	 }
 }

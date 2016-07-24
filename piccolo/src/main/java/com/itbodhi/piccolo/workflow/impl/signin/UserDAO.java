@@ -9,6 +9,7 @@ public class UserDAO {
 		User user = null;
 		
 		// Hibernate code to get user
+		// from User where loginid = loginid
 		
 		return user;
 	}

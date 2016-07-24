@@ -4,23 +4,65 @@ import com.itbodhi.piccolo.entity.base.UserBase;
 
 public class User extends UserBase{
 
-	public String getLoginId()
-	{
-		return this.loginId;
+	@Override
+	public String getLoginId() {
+		// TODO Auto-generated method stub
+		return super.getLoginId();
 	}
 
-	public String getPassword()
-	{
-		return this.password;
+	@Override
+	public void setLoginId(String loginId) {
+		// TODO Auto-generated method stub
+		super.setLoginId(loginId);
 	}
 
-	public void setLoginId(String loginId)
-	{
-		 this.loginId = loginId;
+	@Override
+	public String getPassword() {
+		// TODO Auto-generated method stub
+		return super.getPassword();
 	}
 
-	public void setPassword(String password)
-	{
-		 this.password = password;
+	@Override
+	public void setPassword(String password) {
+		// TODO Auto-generated method stub
+		super.setPassword(password);
 	}
+
+	@Override
+	public String getPhone() {
+		// TODO Auto-generated method stub
+		return super.getPhone();
+	}
+
+	@Override
+	public void setPhone(String phone) {
+		// TODO Auto-generated method stub
+		super.setPhone(phone);
+	}
+
+	@Override
+	public String getType() {
+		// TODO Auto-generated method stub
+		return super.getType();
+	}
+
+	@Override
+	public void setType(String type) {
+		// TODO Auto-generated method stub
+		super.setType(type);
+	}
+
+	@Override
+	public String getConfirm() {
+		// TODO Auto-generated method stub
+		return super.getConfirm();
+	}
+
+	@Override
+	public void setConfirm(String confirm) {
+		// TODO Auto-generated method stub
+		super.setConfirm(confirm);
+	}
+
+
 }

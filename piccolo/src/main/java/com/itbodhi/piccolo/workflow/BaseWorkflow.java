@@ -2,7 +2,7 @@ package com.itbodhi.piccolo.workflow;
 
 public abstract class BaseWorkflow {
 
-	WorkFlowContext wfCtx;
+	public WorkFlowContext wfCtx;
 
 	public WorkFlowContext getWfCtx() {
 		return wfCtx;
