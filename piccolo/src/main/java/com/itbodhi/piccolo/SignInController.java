@@ -1,6 +1,6 @@
 package com.itbodhi.piccolo;
 
-import org.hibernate.SessionFactory;
+
 
 import com.itbodhi.piccolo.db.HibernateUtil;
 import com.itbodhi.piccolo.ui.bean.UserBean;
