@@ -11,7 +11,7 @@ public class HibernateUtil {
 	//Annotation based configuration
 	private static SessionFactory sessionAnnotationFactory;
 	
-    private static SessionFactory buildSessionAnnotationFactory() {
+    public static SessionFactory buildSessionAnnotationFactory() {
     	try {
             // Create the SessionFactory from hibernate.cfg.xml
         	Configuration configuration = new Configuration();
