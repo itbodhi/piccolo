@@ -17,7 +17,7 @@
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
-      <version>5.1.0.Final</version>
+      <version>5.2.0.Final</version>
     </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -99,7 +99,7 @@
 			
 						  
 			<configuration>
-              <outputDirectory>C:\\Program Files\Apache Software Foundation\Tomcat 8.0\webapps</outputDirectory>
+              <outputDirectory>C:\\Program%20Files\\Apache%20Software%20Foundation\\Tomcat%208.0\\webapps\\</outputDirectory>
             </configuration> 
             
 		</plugin>

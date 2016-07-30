@@ -1,4 +1,4 @@
-package com.itbodhi.piccolo;
+package com.itbodhi.piccolo.controller;
 
 import com.itbodhi.piccolo.controller.Response;
 import com.itbodhi.piccolo.ui.bean.UserBean;

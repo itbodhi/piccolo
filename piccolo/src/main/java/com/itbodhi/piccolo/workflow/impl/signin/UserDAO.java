@@ -9,9 +9,9 @@ import com.itbodhi.piccolo.entity.User;
 
 public class UserDAO {
 
-	public String getUser(String loginid){
+	public User getUser(String loginid){
 		
-		String user = null;
+		User user = null;
 		
 		Employee1 emp= new Employee1();
 		  
@@ -24,12 +24,12 @@ public class UserDAO {
 		   
 		   //save the model object
 		   String hql = "from User where loginId = loginid";
-		   emp=(Employee1)session.createQuery(hql);
+		   user=(User)session.createQuery(hql);
 		   
 		   //commit transaction
 		   session.getTransaction().commit();
-		   user = emp.getUsername();
-		   System.out.println("Employee id= "+ user);
+		   
+		  // System.out.println("Employee id= "+ user);
 		   
 		   //terminate session factory, otherwise program won't end
 		   sessionFactory.close();
