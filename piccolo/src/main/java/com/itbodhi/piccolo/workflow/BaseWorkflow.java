@@ -1,18 +1,28 @@
 package com.itbodhi.piccolo.workflow;
 
+import com.workflow.WorkFlowContext;
+
 public abstract class BaseWorkflow {
 
-	WorkFlowContext wfCtx;
-
-	public WorkFlowContext getWfCtx() {
-		return wfCtx;
+	public WorkFlowContext wfCtx;
+	   
+	public WorkFlowContext getWfCtx() 
+{
+	 return wfCtx;
 	}
 
-	public void setWfCtx(WorkFlowContext wfCtx) {
+	
+public void setWfCtx(WorkFlowContext wfCtx)
+ {
 		this.wfCtx = wfCtx;
 	}
+
 	
-	public void resetWorkFlowContext(){
+	public void resetWorkFlowContext()
+{
 		this.wfCtx = null;
 	}
+
 }
+
+
