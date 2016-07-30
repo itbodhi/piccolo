@@ -43,5 +43,15 @@ public class SignInWorkflow extends BaseWorkflow implements Workflow{
 			throw new Exception("Password is wrong");
 		}
 	}
+
+	public void setContext(Object ctx) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Object getContext() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

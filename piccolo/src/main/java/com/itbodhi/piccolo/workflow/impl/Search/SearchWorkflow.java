@@ -45,6 +45,14 @@ public void locationExist(String location) throws Exception
 		throw new Exception("Event doesnot exist");
 	}
 	}
+public void setContext(Object ctx) {
+	// TODO Auto-generated method stub
+	
+}
+public Object getContext() {
+	// TODO Auto-generated method stub
+	return null;
+}
 	
 }
 	
