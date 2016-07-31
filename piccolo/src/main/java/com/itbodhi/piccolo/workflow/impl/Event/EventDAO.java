@@ -6,8 +6,8 @@ import org.hibernate.SessionFactory;
 import com.itbodhi.piccolo.db.HibernateUtil;
 import com.itbodhi.piccolo.entity.Event;
 
-public class EventSubmitDAO {
-	public boolean SubmitDetails(Eventsubmit sb)
+public class EventDAO {
+	public boolean SubmitDetails(Event sb)
 	{
 		try
 		{

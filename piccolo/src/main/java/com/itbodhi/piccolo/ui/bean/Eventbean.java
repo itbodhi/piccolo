@@ -1,4 +1,4 @@
-package com.itbodhi.piccolo.ui.bean;;
+package com.itbodhi.piccolo.ui.bean;
 
 import com.itbodhi.piccolo.entity.base.EventBase;
 

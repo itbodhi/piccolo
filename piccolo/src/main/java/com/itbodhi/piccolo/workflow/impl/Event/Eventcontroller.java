@@ -18,7 +18,7 @@ import com.itbodhi.piccolo.workflow.Workflow;
 public class Eventcontroller {
 	
 	@RequestMapping(value = "/submitform" ,method = RequestMethod.POST)
-    public Response getsubmitform(@RequestBody EventSubmitbean sb){
+    public Response getsubmitform(@RequestBody Eventbean sb){
         
 		//UserBean sb=
 		String message=new String();
