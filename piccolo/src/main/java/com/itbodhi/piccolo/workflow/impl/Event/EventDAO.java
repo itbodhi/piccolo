@@ -1,10 +1,10 @@
-package  com.itbodhi.piccolo.workflow.impl.EventSubmit;
+package  com.itbodhi.piccolo.workflow.impl.Event;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 import com.itbodhi.piccolo.db.HibernateUtil;
-import com.itbodhi.piccolo.entity.Eventsubmit;
+import com.itbodhi.piccolo.entity.Event;
 
 public class EventSubmitDAO {
 	public boolean SubmitDetails(Eventsubmit sb)

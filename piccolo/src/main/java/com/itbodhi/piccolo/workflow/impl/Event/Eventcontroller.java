@@ -1,4 +1,4 @@
-package com.itbodhi.piccolo.workflow.impl.EventSubmit;
+package com.itbodhi.piccolo.workflow.impl.Event;
 
 
 
@@ -8,21 +8,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.itbodhi.piccolo.ui.bean.EventSubmitbean;
-import com.itbodhi.piccolo.workflow.impl.EventSubmit.EventSubmitworkflow;
+import com.itbodhi.piccolo.ui.bean.Eventbean;
+import com.itbodhi.piccolo.workflow.impl.EventSubmit.Eventworkflow;
 import com.itbodhi.piccolo.workflow.WorkFlowContext;
 import com.itbodhi.piccolo.workflow.Workflow;
 
 @Controller
 @RestController(value = "/")
-public class EventSubmitcontroller {
+public class Eventcontroller {
 	
 	@RequestMapping(value = "/submitform" ,method = RequestMethod.POST)
     public Response getsubmitform(@RequestBody EventSubmitbean sb){
         
 		//UserBean sb=
 		String message=new String();
-		Workflow submit = new EventSubmitworkflow();		
+		Workflow submit = new Eventworkflow();		
 		WorkFlowContext ctx = new WorkFlowContext();	
 		ctx.setIpContxt(sb);
 		submit.setContext(ctx);

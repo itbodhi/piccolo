@@ -1,8 +1,8 @@
 package com.itbodhi.piccolo.ui.bean;;
 
-import com.itbodhi.piccolo.entity.base.BaseEventsubmit;
+import com.itbodhi.piccolo.entity.base.EventBase;
 
-public class EventSubmitbean extends BaseEventsubmit {
+public class Eventbean extends EventBase {
 
 	/* (non-Javadoc)
 	 * @see com.base.Basesubmit#getEventName()
