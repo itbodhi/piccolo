@@ -2,11 +2,13 @@ package com.itbodhi.piccolo.entity.base;
 
 public class UserBase {
 
+	public String username;
 	public String loginId;
-	public String pasword;
+	public String password;
 	public String phone;
 	public String type;
 	public String confirm;
+	public String address;
 	public int id;
 	
 	public String getLoginId() {
@@ -16,10 +18,10 @@ public class UserBase {
 		this.loginId = loginId;
 	}
 	public String getPassword() {
-		return pasword;
+		return password;
 	}
 	public void setPassword(String password) {
-		this.pasword = password;
+		this.password = password;
 	}
 	public String getPhone() {
 		return phone;
@@ -38,6 +40,30 @@ public class UserBase {
 	}
 	public void setConfirm(String confirm) {
 		this.confirm = confirm;
+	}
+	public int getId() {
+		// TODO Auto-generated method stub
+		return id;
+	}
+	public void setId(int Id) {
+		// TODO Auto-generated method stub
+		this.id = Id;
+	}
+	public String getUserName() {
+		// TODO Auto-generated method stub
+		return username;
+	}
+	public void setUserName(String userName) {
+		// TODO Auto-generated method stub
+		this.username = userName;
+	}
+	public String getAddress() {
+		// TODO Auto-generated method stub
+		return address;
+	}
+	public void setAddress(String address) {
+		// TODO Auto-generated method stub
+		this.username = address;
 	}
 	
 }

@@ -17,6 +17,7 @@ public class SignInController {
 	@RequestMapping(value = "/signin" ,method = RequestMethod.POST)
     public Response getLogin(@RequestBody UserBean uq ){
         
+		System.out.println("reached here");
 		//UserBean ub=
 		String message=new String();
 		Workflow signIn = new SignInWorkflow();		

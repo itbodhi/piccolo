@@ -11,7 +11,7 @@ import com.itbodhi.piccolo.ui.bean.UserQueryBean;
 
 
 
-@RestController(value = "/")
+@RestController(value = "/gen")
 public class GenericController {
 
     @RequestMapping(value = "/list" ,method = RequestMethod.POST)

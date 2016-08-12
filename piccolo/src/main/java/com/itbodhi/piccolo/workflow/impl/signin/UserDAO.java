@@ -12,8 +12,6 @@ public class UserDAO {
 	public User getUser(String loginid){
 		
 		User user = null;
-		
-		Employee1 emp= new Employee1();
 		  
 		   //get session 
 		   SessionFactory sessionFactory = HibernateUtil.buildSessionAnnotationFactory();

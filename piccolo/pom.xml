@@ -91,15 +91,24 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.5.1</version>
+        <configuration>
+         <source>1.8</source>
+          <target>1.8</target>
+          </configuration>
       </plugin>  
      	<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-war-plugin</artifactId>
-			<version>2.4</version>
+			<version>2.6</version>
 			
 						  
 			<configuration>
-              <outputDirectory>C:\\Program%20Files\\Apache%20Software%20Foundation\\Tomcat%208.0\\webapps\\</outputDirectory>
+              <outputDirectory>
+              
+              F:\\Apache&#x20;Software&#x20;Foundation\\Tomcat&#x20;8.0\\webapps\\
+             
+              </outputDirectory>
+              
             </configuration> 
             
 		</plugin>
